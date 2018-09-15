@@ -2,9 +2,7 @@
 DATAF=`date --date '1 days ago' +"%Y-%m-%d"`
 set -xv
 
-
-:D:D::DD::D:D:D:D
-:D
+# resolvendo divergencias no git 
 
 	ps aux | grep landing-pages | grep -v grep |  awk '{print $2}'| xargs -i kill -9 ;
           sleep 2;
