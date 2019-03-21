@@ -1,0 +1,41 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "wordpress",
+      "image": "wordpress",
+      "essential": true,
+      "memory": 128,
+      "Volumes": [
+        {
+          "HostDirectory": "/var/log/wordpress",
+          "ContainerDirectory": "/AppServer/wordpress"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ]
+    },
+    {
+      "name": "tomcat",
+      "image": "8tomcat",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 8888,
+          "containerPort": 8888
+        }
+      ],
+      "Volumes": [
+        {
+          "HostDirectory": "/var/log/tomcat",
+          "ContainerDirectory": "/AppServer/tomcat"
+        }
+      ]
+    }
+  ]
+}
