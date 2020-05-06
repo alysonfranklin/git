@@ -26,10 +26,12 @@ pipeline {
     }
 
     stage('Build') {
-      steps {
-        echo 'buildando...'
+      agent {
+          docker { image 'hashicorp/terraform:0.12.19'}
+        steps {
+          sh 'terraform --version'
+        }
       }
-    }
 
-  }
+    }
 }
