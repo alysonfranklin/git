@@ -5,7 +5,6 @@ pipeline {
       parallel {
         stage('Pre-Build') {
           steps {
-            echo 'Build do "$DEMO"'
             sh 'echo "this is build $BUILD_NUMBER of demo $DEMO"'
           }
         }
