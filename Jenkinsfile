@@ -12,6 +12,7 @@ pipeline {
         stage('Instalando Terraform') {
           steps {
             echo 'Testando terraform...'
+            sh 'sleep 5'
           }
         }
 
