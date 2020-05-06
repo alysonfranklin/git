@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pre-Build') {
       steps {
-        echo 'Build do $DEMO'
+        echo 'Build do "$DEMO"'
       }
     }
 
