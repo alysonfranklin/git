@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Pre-Build') {
           steps {
-            sh 'echo "this is build $BUILD_NUMBER of demo $DEMO"'
+            sh 'echo "this is build $BUILD_NUMBER of demo $DEMO" && sleep 3'
           }
         }
 
